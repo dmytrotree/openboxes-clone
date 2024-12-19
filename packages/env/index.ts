@@ -4,22 +4,22 @@ import { z } from 'zod';
 const server: Parameters<typeof createEnv>[0]['server'] = {
   CLERK_SECRET_KEY: z.string().min(1).startsWith('sk_'),
   CLERK_WEBHOOK_SECRET: z.string().min(1).startsWith('whsec_').optional(),
-  RESEND_FROM: z.string().min(1).email(),
+  // RESEND_FROM: z.string().min(1).email(),
   DATABASE_URL: z.string().min(1).url(),
-  RESEND_TOKEN: z.string().min(1).startsWith('re_'),
-  STRIPE_SECRET_KEY: z.string().min(1).startsWith('sk_'),
-  STRIPE_WEBHOOK_SECRET: z.string().min(1).startsWith('whsec_').optional(),
+  // RESEND_TOKEN: z.string().min(1).startsWith('re_'),
+  // STRIPE_SECRET_KEY: z.string().min(1).startsWith('sk_'),
+  // STRIPE_WEBHOOK_SECRET: z.string().min(1).startsWith('whsec_').optional(),
   BETTERSTACK_API_KEY: z.string().min(1).optional(),
-  BETTERSTACK_URL: z.string().min(1).url().optional(),
+  // BETTERSTACK_URL: z.string().min(1).url().optional(),
   ARCJET_KEY: z.string().min(1).startsWith('ajkey_').optional(),
   ANALYZE: z.string().optional(),
-  SVIX_TOKEN: z
-    .union([
-      z.string().min(1).startsWith('sk_'),
-      z.string().min(1).startsWith('testsk_'),
-    ])
-    .optional(),
-  LIVEBLOCKS_SECRET: z.string().min(1).startsWith('sk_').optional(),
+  // SVIX_TOKEN: z
+  //   .union([
+  //     z.string().min(1).startsWith('sk_'),
+  //     z.string().min(1).startsWith('testsk_'),
+  //   ])
+  //   .optional(),
+  // LIVEBLOCKS_SECRET: z.string().min(1).startsWith('sk_').optional(),
   OPENAI_API_KEY: z.string().min(1).startsWith('sk-').optional(),
   BASEHUB_TOKEN: z.string().min(1).startsWith('bshb_pk_'),
   UPSTASH_REDIS_REST_URL: z.string().min(1).url().optional(),
@@ -66,7 +66,7 @@ export const env = createEnv({
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
     STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
     BETTERSTACK_API_KEY: process.env.BETTERSTACK_API_KEY,
-    BETTERSTACK_URL: process.env.BETTERSTACK_URL,
+    // BETTERSTACK_URL: process.env.BETTERSTACK_URL,
     ARCJET_KEY: process.env.ARCJET_KEY,
     ANALYZE: process.env.ANALYZE,
     SENTRY_ORG: process.env.SENTRY_ORG,
@@ -75,8 +75,8 @@ export const env = createEnv({
     NEXT_RUNTIME: process.env.NEXT_RUNTIME,
     FLAGS_SECRET: process.env.FLAGS_SECRET,
     BLOB_READ_WRITE_TOKEN: process.env.BLOB_READ_WRITE_TOKEN,
-    SVIX_TOKEN: process.env.SVIX_TOKEN,
-    LIVEBLOCKS_SECRET: process.env.LIVEBLOCKS_SECRET,
+    // SVIX_TOKEN: process.env.SVIX_TOKEN,
+    // LIVEBLOCKS_SECRET: process.env.LIVEBLOCKS_SECRET,
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
     BASEHUB_TOKEN: process.env.BASEHUB_TOKEN,
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:
