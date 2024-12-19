@@ -65,13 +65,13 @@ const data = {
   navMain: [
     {
       title: 'Playground',
-      url: '#',
+      url: '/playground',
       icon: SquareTerminalIcon,
       isActive: true,
       items: [
         {
           title: 'History',
-          url: '#',
+          url: '/playground/history',
         },
         {
           title: 'Starred',
@@ -156,29 +156,29 @@ const data = {
       icon: AnchorIcon,
     },
     {
-      title: 'Support',
+      title: 'Help',
       url: '#',
       icon: LifeBuoyIcon,
     },
     {
-      title: 'Feedback',
+      title: 'Settings',
       url: '#',
-      icon: SendIcon,
+      icon: Settings2Icon,
     },
   ],
   projects: [
     {
-      name: 'Design Engineering',
+      name: 'project-cat-1',
       url: '#',
       icon: FrameIcon,
     },
     {
-      name: 'Sales & Marketing',
+      name: 'project-cat-2',
       url: '#',
       icon: PieChartIcon,
     },
     {
-      name: 'Travel',
+      name: 'project-cat-3',
       url: '#',
       icon: MapIcon,
     },
